@@ -81,6 +81,12 @@ def recurse_tree(G, center, cookie, distance, origin):
                     if 'place' in fact.keys():
                         birthplace = fact['place']['original']
                         break
+            # Check Mauritius
+            if 'mauritius' in birthplace.lower():
+                print('#######################')
+                print(name + ' ' + pid + ' WAS BORN IN MAURITIUS')
+                print('#######################')
+            ####################
 
             G.add_node(pid, name=name, birthplace=birthplace)
             G.add_edge(center, pid, relationship=relationship_type)
