@@ -111,5 +111,5 @@ def recurse_tree(G, center, cookie, distance, origin):
                 print('done recursion')
                 return G
             else:
-                print('both parents added, going back down')
+                print('both parents added, or parents not present. going back down')
                 return recurse_tree(G, list(G.predecessors(center))[0], cookie, distance, origin)
